@@ -1,0 +1,435 @@
+@font-face {
+	font-family: avenir-light;
+	src: url(/istar/assets/fonts/avenir-light-webfont.woff);
+}
+
+body {
+	font-family: avenir-light !important;
+	padding-top: 1rem;
+}
+
+.starter-template {
+    padding: 7rem 1.5rem;
+    padding-top: 7rem;
+    padding-right: 1.5rem;
+    padding-bottom: 7rem;
+    padding-left: 1.5rem;
+}
+
+/* navbar */
+.navbar {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 5px 0
+		rgba(0, 0, 0, .12);
+	margin-bottom: 0px !important;
+	background: #fff;
+	padding: 0px;
+	height: 50px;
+}
+
+.top-navigation .navbar-brand {
+	background: #eb384f;
+	color: #fff;
+	padding: 15px 25px;
+}
+
+.navbar-brand, .navbar-brand:hover, .navbar-brand:focus {
+	float: left;
+	height: 50px;
+	padding: 15px 15px;
+	font-size: 18px;
+	line-height: 20px;
+	background-color: #eb384f !important;
+	color: white;
+}
+
+.nav-item {
+	margin-left: 30px;
+}
+
+.navbar-nav a {
+	color: #333333;
+	font-size: 16px;
+}
+
+.navbar-brand a:hover, a:focus {
+	color: #fff!importnat;
+}
+
+.navbar-nav .active>.nav-link {
+	color: #eb384f !important;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.user-menu {
+	position: absolute;
+	right: 25px;
+}
+
+.page-header {
+	text-align: left;
+}
+
+.slide_item {
+	background-color: rgb(255, 255, 255);
+	border-radius: 1.3px;
+}
+
+.slide_button {
+	border-radius: 41.8px !important;
+	background-color: #eb384f;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.31);
+	text-align: center;
+	z-index: 999 !important;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	position: relative;
+	top: -20px;
+	color: white;
+}
+
+.slick-prev.slick-arrow {
+	background-image:
+		url('http://business.talentify.in:9999/assets/images/992180-2001-copy.png');
+}
+
+.slick-next.slick-arrow {
+	background-image:
+		url('http://business.talentify.in:9999/assets/images/992180-200-copy.png');
+}
+
+.container-fluid {
+	background-color: #f3f3f4 !important;
+	width: 98%;
+}
+
+.panel-body {
+	background: none !important;
+	border: none !important;
+}
+
+.bottom-slider-item {
+	background-color: #f3f3f4 !important;
+}
+
+.table-responsive {
+	box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.05), 0 6px 8px 0
+		rgba(0, 0, 0, 0.04);
+	background: white;
+	padding: 13px;
+}
+
+.reprort-card-container {
+	margin-top: 20px;
+	margin-bottom: 15px;
+	height: 274px;
+}
+
+.report_card_group {
+	width: 100%;
+	height: 400px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 24px 0px, rgba(0, 0, 0, 0.04)
+		0px 6px 8px 0px;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+.report-roles-card {
+	cursor: pointer;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.report-roles-card {
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.report-section-card-header-title {
+	font-family: avenir-light;
+	font-size: 17px;
+	text-align: left;
+	color: rgb(85, 85, 85);
+}
+
+.report-section-completion {
+	height: 15px;
+	font-family: avenir-light;
+	font-size: 12px;
+	text-align: left;
+	color: rgb(85, 85, 85);
+}
+
+.report-roles-course-completion {
+	height: 15px;
+	font-family: avenir-light;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	color: rgb(85, 85, 85);
+}
+
+.report-group-image {
+	width: 40px;
+	height: 40px;
+	background-color: rgb(53, 59, 82);
+	box-shadow: rgba(0, 0, 0, 0.14) 0px 12px 24px 0px, rgba(0, 0, 0, 0.21)
+		0px 4px 5px 0px;
+	border-radius: 4px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+	border-top: thin solid rgba(153, 153, 153, 0.6);
+	border-right: 0px;
+	border: thin solid rgba(153, 153, 153, 0.6);
+	border-left: thin solid rgba(153, 153, 153, 0.6);
+	font-family: avenir-light;
+	height: 37.3px;
+	outline: 0;
+	padding: .4em 0 .4em .6em;
+	width: 13vw;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.download_excel {
+	position: absolute;
+	right: 314px;
+	top: 47px;
+}
+
+.checked {
+	color: orange;
+	height: 20px;
+}
+
+
+.line {
+    width: 100%;
+    height: 1px;
+    border: solid 1px rgba(151, 151, 151, 0.14);
+}
+.line {
+    height: 3px;
+    border: solid 1px rgba(151, 151, 151, 0.14);
+}
+
+.report-section-carousel-card {
+	margin: 20px;
+	padding: 10px
+}
+
+.progress-bar.report-roles-progress {
+    height: 5px !important;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, #b5ec45, #7ed321);
+    box-shadow: 4px 0 8px 0 rgba(126, 211, 33, 0.57), 2px 0 2px 0 rgba(0, 0, 0, 0.19);
+    border: solid 1px rgba(86, 86, 86, 0.12);
+}
+
+
+.custom_card_body_individual_role_report {
+    padding: 40px;
+    padding-bottom: 0px;
+}
+
+.custom_div_individual_role_report {
+    width: 212px;
+    height: 201px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px rgba(151, 151, 151, 0.14);
+}
+
+.custom_div_individual_role_report {
+    width: 212px;
+    height: 201px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px rgba(151, 151, 151, 0.14);
+}
+
+.custom_card_content_icon_individual_role_report {
+    padding-left: 90px;
+    padding-top: 47px;
+}
+
+.custom_card_users_individual_role_report {
+    font-family: avenir-light;
+    font-size: 36px;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.custom_card_detail_individual_role_report {
+    font-family: avenir-light;
+    font-size: 12px;
+    font-weight: bold;
+    color: #9b9b9b;
+    text-align: center;
+}
+.report-section-card-header-title h2{
+    font-size: 17px;
+}
+
+.report-section-card-header-title {
+    font-family: avenir-light;
+    font-size: 17px;
+    text-align: left;
+    color: #555555;
+}
+
+
+.custom-skill-profile-card {
+    width: 1076px;
+    height: 225px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.05), 0 6px 8px 0 rgba(0, 0, 0, 0.04);
+}
+
+
+.custom-skill-profile-img {
+    background-color: #3b3c45;
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+.custom-no-margins-for-user {
+    margin: 0px !important;
+    /* border-top: 1.5px solid #eeeeee !important; */
+}
+
+.progress {
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-align: center;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+#tree1,
+.tree ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+#tree1 ul {
+    margin-left: 1em;
+    position: relative
+}
+#tree1 ul ul {
+    margin-left: .5em
+}
+#tree1 ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid;
+    color: #c3c2c2;
+}
+#tree1 li {
+    margin: 0;
+    padding: 0 1em;
+    line-height: 2em;
+    color: #3f3f3f;
+    font-size: 16px;
+    line-height: 2.1;
+    position: relative;
+    font-family: avenir-light;
+}
+#tree1 ul li:before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 0;
+    border-top: 1px solid;
+    margin-top: -1px;
+    position: absolute;
+    top: 2em;
+    left: 0;
+    color: #c3c2c2;
+}
+#tree1 ul li:last-child:before {
+    background: #fff;
+    height: auto;
+    top: 2em;
+    bottom: 0
+}
+.indicator {
+    margin-right: 5px;
+}
+#tree1 li a {
+    text-decoration: none;
+    color: #369;
+}
+#tree1 li button,
+#tree1 li button:active,
+#tree1 li button:focus {
+    text-decoration: none;
+    color: #369;
+    border: none;
+    background: transparent;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    outline: 0;
+}
+.glyphicon-minus-sign:before {
+    content: '';
+    
+    display: inline-block;
+    background: url("../images/expanded.png") no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+}
+.glyphicon-plus-sign:before {
+     content: ' ';
+     display: inline-block;
+    background: url("../images/collapsed-02.png") no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+}
+.custom-skillprofile-skill-progress {
+    height: 6.1px;
+    border-radius: 53.3px;
+    background-color: #ffb945;
+    display: block !important;
+}
+.custom-skillprofile-xp_points {
+    min-width: 230px;
+    height: 25.5px;
+    font-family: avenir-light;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: right;
+    color: #98999b;
+    float: right;
+}
+.custom-skillprofile-subskills {
+    width: 88.8px;
+    height: 25.5px;
+    font-family: avenir-light;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: left;
+    color: #98999b;
+    float: right;
+}

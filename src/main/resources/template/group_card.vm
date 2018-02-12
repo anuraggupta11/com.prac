@@ -1,0 +1,72 @@
+
+#foreach( $group_card in $data.get('data') )
+<div class="col-md-4" data-mydata="$data.get('data')">
+<div class="card group-card-shadow mt-3" >
+   <div class="card-header bg-white">
+      <div class="row">
+         <div class="col-md-8">
+            <p class="font-weight-bold">$group_card.get('name')</p>
+         </div>
+         <div class="col-md-4">
+            <span class="badge badge-warning">
+            $group_card.get('group_type')
+            </span>
+         </div>
+      </div>
+   </div>
+   <div class="card-body group-card-scroll">
+      <div class="row mt-3">
+         <div class="col-3">
+            <small class="text-muted ml-3 font-weight-bold">Member</small>
+            <small class="font-weight-bold ml-3">$group_card.get('members')</small>
+         </div>
+         <div class="col-9">
+         </div>
+      </div>
+      <div class="row mt-3">
+         <div class="col-12">
+            <small class="text-muted ml-3 font-weight-bold">Skills</small>
+            <ul class="text-muted m-0">
+               #foreach($skills in $group_card.get('skills'))
+               #if ($foreach.count <= 3)
+               <li > $skills </li>
+               #else
+               
+               		#if($foreach.count == 4)
+               		#set ($id = #$group_card.get('name').replace(' ','_') + #$group_card.get('id').toString() )
+					#set ($show_more_skills = $group_card.get('skills').length() - 3 )  
+					
+               		
+               		
+                  <div id="accordion" role="tablist" aria-multiselectable="true">
+                     <div class="">
+                        <div class="" role="tab" id="collapseOne">
+                           <h5 class="mb-0">
+                              <a data-toggle="collapse" data-show="$show_more_skills"  class="header" data-parent="#accordion" href="#$id"  aria-expanded="true" aria-controls="collapseOne">
+                            + $show_more_skills more
+                              </a>
+                           </h5>
+                        </div>
+                          <div id="$id" class="collapse " role="tabpanel" aria-labelledby="headingOne">
+                        #end
+                      
+                          
+                           <div> <li>$skills</li> </div>
+                           
+                        
+                        #if($foreach.count == $group_card.get('skills').length())
+                        </div>
+                     </div>
+                     
+                     #end
+               
+               #end
+               #end
+            </ul>
+            
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+#end

@@ -55,20 +55,9 @@ $( document ).ready(function() {
     	
     //	$('.select2-results__option.select2-results__option--highlighted').append('<i class="fa fa-angle-down"></i>');
     
-    $('#group_name').select2({
-    	placeholder: "Group Name", //placeholder
-		templateResult: setCurrency1,
-		templateSelection: setCurrency		 
-    });
-    $('#group_name1').select2({
-    	placeholder: "Group Name", //placeholder
-		templateResult: setCurrency1,
-		templateSelection: setCurrency		 
-    });
-    
-    $('#group_name').on('change', function() {
-      
-    }).change(); 
+   
+   $('.selectbox').SumoSelect();
+
 });
 
 

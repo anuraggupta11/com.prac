@@ -6,5 +6,6 @@
 <link rel="stylesheet"  type="text/css"  href="assets/css/slick-theme.css">
 <link rel="stylesheet"  type="text/css"  href="assets/css/group.css">
 
-<link href="assets/css/select2.min.css" rel="stylesheet" />
+<link href="assets/css/sumoselect.css" rel="stylesheet" />
+
 <link rel="stylesheet"  type="text/css"  href="assets/css/jquery.rateyo.min.css">

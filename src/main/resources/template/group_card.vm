@@ -1,14 +1,49 @@
+ #set($uniqueGroupType = [])
+<div class="row">
+	<div class="col-md-6"></div>      
+	<div class="col-md-6">
+	<div class="row">
+			<div class="col-md-4">
+		<select multiple="multiple" name="somename0" class="selectbox" data-placeholder="Group type" data-searchClass="group-card-shadow" data-searchfield="groupType">
+		#foreach( $group_card in $data.get('data') )
+		#if(! $uniqueGroupType.contains($group_card.get('group_type')))
+		$uniqueGroupType.add($group_card.get('group_type'))
+		#end
+        
+        #end
+        #foreach( $group_type in $uniqueGroupType )
+        <option value=$group_type>$group_type</option>
+        #end
+    </select>
+		</div>
+		
+		<div class="col-md-4">
+		<select multiple="multiple" name="somename0" class="selectbox" data-placeholder="Group Name" data-searchClass="group-card-shadow" data-searchfield="groupName">
+		#foreach( $group_card in $data.get('data') )
+        <option value=$group_card.get('name')>$group_card.get('name')</option>
+        #end
+    </select>
+		</div>
+		
+		<div class="col-md-4">
+		<button type="button" class="btn btn-danger">Create Group</button>
+		</div>
+	</div>
+	</div>
+</div>
 
+
+<div class="row">
 #foreach( $group_card in $data.get('data') )
-<div class="col-md-4" data-mydata="$data.get('data')">
-<div class="card group-card-shadow mt-3" >
+<div class="col-md-4">
+<div class="card group-card-shadow mt-3 rounded-0"  data-groupType=$group_card.get('group_type') data-groupName=$group_card.get('name')>
    <div class="card-header bg-white">
       <div class="row">
          <div class="col-md-8">
-            <p class="font-weight-bold">$group_card.get('name')</p>
+            <p class="font-weight-bold group-card-title-font font-16 mb-0">$group_card.get('name')</p>
          </div>
          <div class="col-md-4">
-            <span class="badge badge-warning">
+            <span class="badge badge-warning font-weight-normal">
             $group_card.get('group_type')
             </span>
          </div>
@@ -17,7 +52,7 @@
    <div class="card-body group-card-scroll">
       <div class="row mt-3">
          <div class="col-3">
-            <small class="text-muted ml-3 font-weight-bold">Member</small>
+            <small class="text-custom-muted  ml-3">Member</small>
             <small class="font-weight-bold ml-3">$group_card.get('members')</small>
          </div>
          <div class="col-9">
@@ -25,48 +60,18 @@
       </div>
       <div class="row mt-3">
          <div class="col-12">
-            <small class="text-muted ml-3 font-weight-bold">Skills</small>
-            <ul class="text-muted m-0">
+            <small class="text-custom-muted ml-3">Skills</small>
+         
+            <ul  class="group_skill_list text-muted m-0">
                #foreach($skills in $group_card.get('skills'))
-               #if ($foreach.count <= 3)
-               <li > $skills </li>
-               #else
-               
-               		#if($foreach.count == 4)
-               		#set ($id = #$group_card.get('name').replace(' ','_') + #$group_card.get('id').toString() )
-					#set ($show_more_skills = $group_card.get('skills').length() - 3 )  
-					
-               		
-               		
-                  <div id="accordion" role="tablist" aria-multiselectable="true">
-                     <div class="">
-                        <div class="" role="tab" id="collapseOne">
-                           <h5 class="mb-0">
-                              <a data-toggle="collapse" data-show="$show_more_skills"  class="header" data-parent="#accordion" href="#$id"  aria-expanded="true" aria-controls="collapseOne">
-                            + $show_more_skills more
-                              </a>
-                           </h5>
-                        </div>
-                          <div id="$id" class="collapse " role="tabpanel" aria-labelledby="headingOne">
-                        #end
-                      
-                          
-                           <div> <li>$skills</li> </div>
-                           
-                        
-                        #if($foreach.count == $group_card.get('skills').length())
-                        </div>
-                     </div>
-                     
-                     #end
-               
-               #end
+               <li class="item"> <i class="text-custom-muted fa fa-circle mr-3 font-10" aria-hidden="true"></i><span class=" font-15">$skills</span> </li>
                #end
             </ul>
-            
+           
             </div>
          </div>
       </div>
    </div>
 </div>
 #end
+</div>

@@ -2,16 +2,9 @@ $( document ).ready(function() {
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
     run_page();
-	var maxheight=0;
-    $('.group-card-shadow').each(function(){
-		if($(this).height() > maxheight)
-			maxheight = $(this).height();
-	})
-	 $('.group-card-shadow').each(function(){
-		$(this).css('max-height',maxheight);
-		$(this).css('min-height',maxheight);
-	})
 	
+    setTimeout(fix_card_size, 500);
+
 	
 	$('.collapse').on('hide.bs.collapse', function () {
 		  // do something…
@@ -26,37 +19,39 @@ $( document ).ready(function() {
 
 	});
     
-    function setCurrency (currency) {
-  	  if (!currency.id) {
-  		  return currency.text; }
-  		var $currency = $('<span>' + currency.text + '</span>');
-  		return $currency;
-  	};
-  	
-  	function setCurrency1 (currency) {
-    	  if (!currency.id) {
-    		  return currency.text;
-    		  }
-    	  var $currency
-    	  //aria-selected="true"
-    	  if(currency.selected  == true){
-    		   $currency = $('<span> ' + currency.text + ' <i class="fa fa-check" aria-hidden="true"></i> </span>');
-    	  }else{
-    		   $currency = $('<span> ' + currency.text + '</span>');
-    	  }
-    		
-    		return $currency;
-    	};
-   function format(state){
-	   console.log(state);
-	   
-   }
+   
 //    	select2-results__option select2-results__option--highlighted
     	
     //	$('.select2-results__option.select2-results__option--highlighted').append('<i class="fa fa-angle-down"></i>');
     
+    $('.selectbox').each(function(){
+    	var placeholder = $(this).attr('data-placeholder');
+    	$(this).SumoSelect({
+    		  placeholder: placeholder,
+    		   search: true ,
+    		   triggerChangeCombined: true,
+    		   selectAll: true,
+    		   csvDispCount: 1
+    	   });
+    	
+    });
+    
    
-   $('.selectbox').SumoSelect();
+   sumoSelectChange();
+   $(".group_skill_list").readMoreReadLess({
+       readMoreText: 'Show more items ...',
+       readLessText: 'Show fewer items ...',
+       readMoreClass:'button',
+       readLessClass:'button'
+   });
+   
+   $('.js-data-example-ajax').select2({
+	   ajax: {
+	     url: 'https://api.github.com/search/repositories',
+	     dataType: 'json'
+	     // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+	   }
+	 });
 
 });
 
@@ -150,5 +145,54 @@ function handle_links() {
 			  $('.loader').hide();
 			  run_page();
 			});
+	});
+}
+
+function fix_card_size(){
+	
+	var maxheight=0;
+    $('.group-card-shadow').each(function(){
+		if($(this).height() > maxheight)
+			maxheight = $(this).height();
+	})
+	 $('.group-card-shadow').each(function(){
+		$(this).css('max-height',maxheight);
+		$(this).css('min-height',maxheight);
+		
+	})
+}
+
+function sumoSelectChange(){
+	$('.selectbox').unbind().change(function(){
+		var selected_value = $(this).val();
+		var search_div = $(this).attr('data-searchClass');
+
+		if(selected_value !== null || selected_value != undefined){
+			var search_field = $(this).attr('data-searchfield');
+
+		
+		$('.'+search_div).each(function(){
+			var current_value_in_div = $(this).attr('data-'+search_field);
+			
+			if(current_value_in_div != undefined || current_value_in_div !== ''){
+				try{
+			if(selected_value.includes(current_value_in_div) ){
+				$(this).parent().show();
+			}else{
+				$(this).parent().hide();
+			}
+				}catch(e){
+					console.error('selected value'+selected_value);
+					console.error('sksksjk '+ current_value_in_div);
+
+					console.error($(this).parent().html());
+				}
+			}
+			
+		});
+		
+		}else{
+			$('.'+search_div).each(function(){ $(this).parent().hide(); })
+		}
 	});
 }

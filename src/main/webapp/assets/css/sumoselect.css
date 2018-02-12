@@ -18,7 +18,7 @@
 
     .SumoSelect > .optWrapper > .options  li.opt label, .SumoSelect > .CaptionCont,.SumoSelect .select-all > label { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 
-.SumoSelect { display: inline-block; position: relative;outline:none;}
+.SumoSelect { display: inline-block; position: relative;outline:none;    width: 100%;}
 .SumoSelect:focus > .CaptionCont,.SumoSelect:hover > .CaptionCont, .SumoSelect.open > .CaptionCont {box-shadow: 0 0 2px #7799D0;border-color: #7799D0;}
     .SumoSelect > .CaptionCont { position: relative; border: 1px solid #A4A4A4; min-height: 14px; background-color: #fff;border-radius:2px;margin:0;}
         .SumoSelect > .CaptionCont > span { display: block; padding-right: 30px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;cursor:default;}
@@ -97,7 +97,7 @@
      .SumoSelect.disabled > .CaptionCont{border-color:#ccc;box-shadow:none;}
 
     /**Select all button**/
-    .SumoSelect .select-all{border-radius: 3px 3px 0 0;position: relative;border-bottom: 1px solid #ddd;background-color: #fff;padding: 8px 0 3px 35px;height: 20px;cursor: pointer;}
+    .SumoSelect .select-all{border-radius: 3px 3px 0 0;position: relative;border-bottom: 1px solid #ddd;background-color: #fff;padding: 8px 0 3px 35px;cursor: pointer;}
     .SumoSelect .select-all > label, .SumoSelect .select-all > span i{cursor: pointer;}
     .SumoSelect .select-all.partial > span i{background-color:#ccc;}
 

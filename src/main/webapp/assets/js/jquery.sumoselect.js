@@ -76,7 +76,7 @@
                     O.E.wrap('<div class="SumoSelect" tabindex="0" role="button" aria-expanded="false">');
                     O.select = O.E.parent();
                     O.caption = $('<span>');
-                    O.CaptionCont = $('<p class="CaptionCont SelectBox" ><label><i></i></label></p>')
+                    O.CaptionCont = $('<p class="CaptionCont SelectBox" ><label class="m-0"><i></i></label></p>')
                         .attr('style', O.E.attr('style'))
                         .prepend(O.caption);
                     O.select.append(O.CaptionCont);
@@ -156,7 +156,7 @@
                     var O = this;
 
                     if (!opt.attr('value')) opt.attr('value', opt.val());
-                    var li = $('<li class="opt"><label>' + opt.text() + '</label></li>');
+                    var li = $('<li class="opt"><label class="m-0">' + opt.text() + '</label></li>');
 
                     li.data('opt', opt);    // store a direct reference to option.
                     opt.data('li', li);    // store a direct reference to list item.
@@ -261,7 +261,7 @@
                 SelAll: function () {
                     var O = this;
                     if (!O.is_multi) return;
-                    O.selAll = $('<p class="select-all"><span><i></i></span><label>' + settings.locale[2] + '</label></p>');
+                    O.selAll = $('<p class="select-all"><span><i></i></span><label class="m-0">' + settings.locale[2] + '</label></p>');
                     O.optDiv.addClass('selall');
                     O.selAll.on('click', function () {
                         O.selAll.toggleClass('selected');

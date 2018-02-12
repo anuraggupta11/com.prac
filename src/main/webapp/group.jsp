@@ -14,8 +14,8 @@
 	<div class="loader" style="display: none"></div>
 	<div class="container" id="main_container">
 	<div class="row">
-	<div class="col-md-6"></div>
-	
+	<div class="col-md-6"></div>xSDds
+	      
 	<div class="col-md-6">
 	<div class="row">
 		<div class="col-4">

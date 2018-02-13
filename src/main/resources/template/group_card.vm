@@ -36,7 +36,7 @@
 <div class="row">
 #foreach( $group_card in $data.get('data') )
 <div class="col-md-4">
-<div class="card group-card-shadow mt-3 rounded-0"  data-groupType=$group_card.get('group_type') data-groupName=$group_card.get('name')>
+<div class="card group-card-shadow mt-3 mb-2 rounded-0"  data-groupType=$group_card.get('group_type') data-groupName=$group_card.get('name')>
    <div class="card-header bg-white">
       <div class="row">
          <div class="col-md-8">
